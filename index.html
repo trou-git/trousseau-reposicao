@@ -154,18 +154,63 @@ tbody td{padding:9px 12px;vertical-align:middle}
   </div>
   <div id="content">
     <div id="v-dashboard" class="view on">
-      <div class="krow">
-        <div class="kcard r"><div class="kl">Repor Loja Agora</div><div class="kv" id="k-loja">—</div><div class="ks">SKUs · <span id="k-loja-pecas" style="color:var(--wg)">—</span> peças</div></div>
-        <div class="kcard a"><div class="kl">Repor Storage</div><div class="kv" id="k-storage">—</div><div class="ks">SKUs · <span id="k-storage-pecas" style="color:var(--wg)">—</span> peças</div></div>
-        <div class="kcard b"><div class="kl">Reposição US (BR)</div><div class="kv" id="k-us">—</div><div class="ks">SKUs · <span id="k-us-pecas" style="color:var(--wg)">—</span> peças</div></div>
-        <div class="kcard g"><div class="kl">Sugestões de Grade</div><div class="kv" id="k-grade">—</div><div class="ks">novos SKUs com vendas</div></div>
+      <div style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--wg);margin-bottom:8px">Necessidades</div>
+      <div class="krow" style="margin-bottom:20px">
+        <div class="kcard r"><div class="kl">Repor Loja</div><div class="kv" id="k-loja">&#8212;</div><div class="ks">SKUs &middot; <span id="k-loja-pecas">&#8212;</span> pe&ccedil;as</div></div>
+        <div class="kcard a"><div class="kl">Repor Storage</div><div class="kv" id="k-storage">&#8212;</div><div class="ks">SKUs &middot; <span id="k-storage-pecas">&#8212;</span> pe&ccedil;as</div></div>
+        <div class="kcard b"><div class="kl">Reposi&ccedil;&atilde;o US (BR)</div><div class="kv" id="k-us">&#8212;</div><div class="ks">SKUs &middot; <span id="k-us-pecas">&#8212;</span> pe&ccedil;as</div></div>
+        <div class="kcard g"><div class="kl">Sugest&otilde;es de Grade</div><div class="kv" id="k-grade">&#8212;</div><div class="ks">novos SKUs com vendas</div></div>
       </div>
-      <div class="dpanels">
-        <div class="icard"><h4>🏪 Loja — Mais Urgentes</h4><ul id="i-loja-top"></ul></div>
-        <div class="icard"><h4>📦 Storage — Mais Urgentes</h4><ul id="i-storage-top"></ul></div>
-        <div class="icard"><h4>🌎 US (BR) — Mais Urgentes</h4><ul id="i-us-top"></ul></div>
+      <div style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--wg);margin-bottom:8px">Estoque por localiza&ccedil;&atilde;o</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px">
+        <div class="icard" style="border-top:2px solid var(--rd)">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:6px">Design District</div>
+          <div style="font-family:serif;font-size:26px;font-weight:300;color:var(--ch)" id="inv-dd-qty">&#8212;</div>
+          <div style="font-size:10px;color:var(--wg);margin-top:2px">pe&ccedil;as</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;justify-content:space-between">
+            <div><div style="font-size:9px;color:var(--wg)">Custo</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-dd-cost">&#8212;</div></div>
+            <div style="text-align:right"><div style="font-size:9px;color:var(--wg)">Venda</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-dd-sale">&#8212;</div></div>
+          </div>
+        </div>
+        <div class="icard" style="border-top:2px solid var(--am)">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:6px">Storage</div>
+          <div style="font-family:serif;font-size:26px;font-weight:300;color:var(--ch)" id="inv-st-qty">&#8212;</div>
+          <div style="font-size:10px;color:var(--wg);margin-top:2px">pe&ccedil;as</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;justify-content:space-between">
+            <div><div style="font-size:9px;color:var(--wg)">Custo</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-st-cost">&#8212;</div></div>
+            <div style="text-align:right"><div style="font-size:9px;color:var(--wg)">Venda</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-st-sale">&#8212;</div></div>
+          </div>
+        </div>
+        <div class="icard" style="border-top:2px solid var(--bl)">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:6px">Ascensus</div>
+          <div style="font-family:serif;font-size:26px;font-weight:300;color:var(--ch)" id="inv-as-qty">&#8212;</div>
+          <div style="font-size:10px;color:var(--wg);margin-top:2px">pe&ccedil;as</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;justify-content:space-between">
+            <div><div style="font-size:9px;color:var(--wg)">Custo</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-as-cost">&#8212;</div></div>
+            <div style="text-align:right"><div style="font-size:9px;color:var(--wg)">Venda</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-as-sale">&#8212;</div></div>
+          </div>
+        </div>
+        <div class="icard" style="border-top:2px solid var(--gn)">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:6px">Total US</div>
+          <div style="font-family:serif;font-size:26px;font-weight:300;color:var(--ch)" id="inv-tot-qty">&#8212;</div>
+          <div style="font-size:10px;color:var(--wg);margin-top:2px">pe&ccedil;as</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);display:flex;justify-content:space-between">
+            <div><div style="font-size:9px;color:var(--wg)">Custo</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-tot-cost">&#8212;</div></div>
+            <div style="text-align:right"><div style="font-size:9px;color:var(--wg)">Venda</div><div style="font-size:12px;font-family:monospace;color:var(--ch)" id="inv-tot-sale">&#8212;</div></div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="icard">
+          <div style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--wg);margin-bottom:14px">Composi&ccedil;&atilde;o &mdash; valor de venda</div>
+          <div id="cat-bars"></div>
+        </div>
+        <div class="icard">
+          <div style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--wg);margin-bottom:14px">Alertas operacionais</div>
+          <ul id="i-loja-top" style="list-style:none"></ul>
+        </div>
+      </div>
+    
     <div id="v-rep-loja" class="view">
       <div class="sh"><div><div class="st2">Reposição Loja — Design District</div><div class="ssub">Storage → Loja · ou Ascensus → Loja quando Storage insuficiente</div></div></div>
       <div id="tw-loja" class="twrap"></div>
@@ -246,6 +291,8 @@ const GRADE_CANDIDATES=[{"SKU":"03350104911001","Nome":"TROU SOHO GUEST HAND TOW
 const NEG_DATA=[{"SKU":"11020101281731","Nome":"Printemps Verre Liquid Soap  8 fl.oz | IRREGULAR | 8.12 FL.OZ.","Localizacao":"Ascensus Logistic","Quantidade":-9,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"03360102331031","Nome":"REST BEACH TOWELS | WHITE-NAVY BLUE | 33X67","Localizacao":"Trousseau Design District","Quantidade":-7,"Categoria":"BANHO"},{"SKU":"06861300121531","Nome":"BREAD PLATE PORCELAIN HERITAGE | WHITE-GREEN-SILVER | ONE SIZE","Localizacao":"Trousseau Design District","Quantidade":-6,"Categoria":"MESA"},{"SKU":"03360102331041","Nome":"REST BEACH TOWELS | WHITE-BEIGE | 33X67","Localizacao":"Trousseau Design District","Quantidade":-5,"Categoria":"BANHO"},{"SKU":"01040159541161","Nome":"TIME SQUARE SHAM KING | WHITE-BLACK | 20X35","Localizacao":"Trousseau Design District","Quantidade":-4,"Categoria":"CAMA"},{"SKU":"01010164141141","Nome":"CITY SHEET SET TWIN BR | WHITE-NAVY BLUE | TWIN","Localizacao":"Trousseau Design District","Quantidade":-4,"Categoria":"CAMA"},{"SKU":"11020101339991","Nome":"WHITE LUXURY NEW TWO-PHASE OIL 500ML | ONE COLOR | 17 OZ","Localizacao":"Trousseau Design District","Quantidade":-3,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"06861300141531","Nome":"SERVING TRAY HERITAGE | WHITE-GREEN-SILVER | ONE SIZE","Localizacao":"Trousseau Design District","Quantidade":-3,"Categoria":"MESA"},{"SKU":"01040157751331","Nome":"CITY SHAM KING | WHITE-BROWN | 21X37","Localizacao":"Trousseau Design District","Quantidade":-3,"Categoria":"CAMA"},{"SKU":"08950101131001","Nome":"PIUMA PLUS STANDARD | WHITE | 20X26","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"RECHEIOS"},{"SKU":"11010102399991","Nome":"BREEZE FRAGRANCE DIFFUSER 8.12 FL.OZ. | ONE COLOR | 8.12 FL.OZ.","Localizacao":"Storage","Quantidade":-2,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"08100102121001","Nome":"ALL YEAR COMFORTER QUEEN | WHITE | 90X94","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"RECHEIOS"},{"SKU":"03310114285551","Nome":"OMEGA BATH TOWEL 1,00MT X 1,70MT | LIGHT GREY | 39X67","Localizacao":"Storage","Quantidade":-2,"Categoria":"BANHO"},{"SKU":"11020101949991","Nome":"BREEZE LIQUID SOAP 8.12 FL.OZ | ONE COLOR | 8.12 FL.OZ.","Localizacao":"Storage","Quantidade":-2,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"01090101301001","Nome":"MICROCOZY BLANKET QUEEN | WHITE | KING","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"COBERTOR / MANTA"},{"SKU":"01040172821041","Nome":"ATHENE STANDARD SHAM 50X70 | WHITE-BEIGE | 20X28","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"CAMA"},{"SKU":"03310100049651","Nome":"TWILL  BATH TOWEL | DENIM | 41X71","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"BANHO"},{"SKU":"08950100831001","Nome":"ALOE VERA PILLOW 50X90 | WHITE | 20X35","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"RECHEIOS"},{"SKU":"01040157671001","Nome":"CHARMING SHAM STANDARD | WHITE | STANDARD","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"CAMA"},{"SKU":"02970508775711","Nome":"ECRU CUSHION COVER 50X50 | IVORY | 20X20","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"COBERTOR / MANTA"},{"SKU":"01010173321331","Nome":"CITY SHEET SET KING | WHITE-BROWN | KING","Localizacao":"Trousseau Design District","Quantidade":-2,"Categoria":"CAMA"},{"SKU":"01050163401001","Nome":"ATHENE CUSHION COVER 35X70 | WHITE-WHITE | 14X28","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"CAMA"},{"SKU":"06861300181531","Nome":"COFFEE CUP AND SAUCER PORCELAIN HERITAGE | WHITE-GREEN-GRAY | ONE SIZE","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"MESA"},{"SKU":"13020109321411","Nome":"MARCELA SHORT PAJAMA | WHITE-LILAC | S","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"HOMEWEAR FEMININO"},{"SKU":"11010102439991","Nome":"PRINTEMPS 3 CANDLES 50G SET | ONE COLOR | 1.76 OZ.","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"03370102101003","Nome":"NEW TERRY MICROFIBER BATH ROBE | WHITE | L","Localizacao":"Ascensus Logistic","Quantidade":-1,"Categoria":"BANHO"},{"SKU":"09010100279991","Nome":"L'AIR DU PRINTEMPS HOME SPRAY 315 ML | ONE COLOR | ONE SIZE","Localizacao":"Storage","Quantidade":-1,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"09010100279991","Nome":"L'AIR DU PRINTEMPS HOME SPRAY 315 ML | ONE COLOR | ONE SIZE","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"FRAGR\u00c2NCIA"},{"SKU":"03310100061001","Nome":"TWILL THICK BATH MAT | WHITE | 20X31","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"BANHO"},{"SKU":"02090102350051","Nome":"CONTESSA BLANKET 2,40M X 2,60M | DARK GRAY | 94X102","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"COBERTOR / MANTA"},{"SKU":"03320100761001","Nome":"HAND + GUEST TOWELS SET | WHITE | ONE SIZE","Localizacao":"Ascensus Logistic","Quantidade":-1,"Categoria":"\u2014"},{"SKU":"02970508920031","Nome":"PERLE CUSHION COVER 35X70 | GRAY | 14X28","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"COBERTOR / MANTA"},{"SKU":"02090102354441","Nome":"CONTESSA BLANKET 2,40M X 2,60M | LIGHT BEIGE | 94X102","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"COBERTOR / MANTA"},{"SKU":"01940100619991","Nome":"NEW CUSHION PAD 30X40 | ONE COLOR | 12X16","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"RECHEIOS"},{"SKU":"03350100010041","Nome":"TWILL GUEST HAND TOWEL | BLACK | 12X16","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"BANHO"},{"SKU":"01040159541451","Nome":"TIME SQUARE SHAM KING | WHITE-SAND | 20X35","Localizacao":"Trousseau Design District","Quantidade":-1,"Categoria":"CAMA"}];
 const DR_SPECS={"08930104891001":{"name":"DOWN ALTERNATIVE COMFORTER KING","size":"108x94","fill":"100% polyester","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":100.0,"collection":"DOWN ALTERNATIVE","type":"comforter"},"08930104901001":{"name":"DOWN ALTERNATIVE COMFORTER QUEEN","size":"90x94","fill":"100% polyester","fw":"43oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":88.0,"collection":"DOWN ALTERNATIVE","type":"comforter"},"08930104911001":{"name":"DOWN ALTERNATIVE COMFORTER TWIN","size":"68x86","fill":"100% polyester","fw":"29oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":65.0,"collection":"DOWN ALTERNATIVE","type":"comforter"},"08950103111001":{"name":"DOWN ALTERNATIVE PILLOW STANDARD","size":"20x26","fill":"100% polyester","fw":"30oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":10,"price":22.0,"collection":"DOWN ALTERNATIVE","type":"pillow"},"08950103121001":{"name":"DOWN ALTERNATIVE PILLOW KING","size":"20x36","fill":"100% polyester","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":6,"price":29.0,"collection":"DOWN ALTERNATIVE","type":"pillow"},"08930104871001":{"name":"HIMALAYA COMFORTER KING","size":"108x94","fill":"White goose down","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":145.0,"collection":"HIMALAYA","type":"comforter"},"08930104881001":{"name":"HIMALAYA COMFORTER QUEEN","size":"90x94","fill":"White goose down","fw":"43oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":125.0,"collection":"HIMALAYA","type":"comforter"},"08950103091001":{"name":"HIMALAYA PILLOW STANDARD","size":"20x26","fill":"White goose down","fw":"30oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":10,"price":38.0,"collection":"HIMALAYA","type":"pillow"},"08950103101001":{"name":"HIMALAYA PILLOW KING","size":"20x36","fill":"White goose down","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":6,"price":52.0,"collection":"HIMALAYA","type":"pillow"},"08100102111001":{"name":"ALL YEAR COMFORTER KING","size":"108x94","fill":"Blended down","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":120.0,"collection":"ALL YEAR","type":"comforter"},"08100102121001":{"name":"ALL YEAR COMFORTER QUEEN","size":"90x94","fill":"Blended down","fw":"43oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":100.0,"collection":"ALL YEAR","type":"comforter"},"08100102131001":{"name":"ALL YEAR COMFORTER TWIN","size":"68x86","fill":"Blended down","fw":"29oz","cover":"300tc, 100% Cotton","desc":"Baffle Box Construction, silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":4,"price":85.0,"collection":"ALL YEAR","type":"comforter"},"08950101161001":{"name":"PIUMA PILLOW STANDARD","size":"20x26","fill":"Blended down","fw":"30oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":10,"price":35.0,"collection":"ALL YEAR","type":"pillow"},"08950101151001":{"name":"PIUMA PILLOW KING","size":"20x36","fill":"Blended down","fw":"50oz","cover":"300tc, 100% Cotton","desc":"Silk piping, double stitching","pkg":"Rope handle vinyl Bag w/ color insert","pack":6,"price":48.0,"collection":"ALL YEAR","type":"pillow"}};
 const DR_MINS={"DOWN ALTERNATIVE":{"comforter":12,"pillow":24},"HIMALAYA":{"comforter":12,"pillow":24},"ALL YEAR":{"comforter":60,"pillow":120}};
+const INV_VALUE={"loja":{"qty":1144.0,"cost":40886.95,"sale":198811.67},"storage":{"qty":580.0,"cost":32573.78,"sale":130415.0},"ascensus":{"qty":8860.0,"cost":253125.72,"sale":1060538.59}};
+const CAT_VALUE={"BANHO":{"qty":5023.0,"cost":63230.09,"sale":212985.0},"CAL\u00c7ADOS":{"qty":84.0,"cost":792.74,"sale":5628.0},"CAMA":{"qty":2404.0,"cost":171618.07,"sale":822565.26},"COBERTOR / MANTA":{"qty":101.0,"cost":7396.31,"sale":35011.0},"FRAGR\u00c2NCIA":{"qty":885.0,"cost":14732.95,"sale":54007.0},"GIFT":{"qty":59.0,"cost":612.99,"sale":2210.0},"HOMEWEAR":{"qty":323.0,"cost":7945.92,"sale":25039.0},"HOMEWEAR FEMININO":{"qty":267.0,"cost":2983.79,"sale":16466.0},"HOMEWEAR MASCULINO":{"qty":766.0,"cost":11130.18,"sale":63444.0},"LIFESTYLE":{"qty":1.0,"cost":48.04,"sale":238.0},"RECHEIOS":{"qty":296.0,"cost":32362.64,"sale":110205.0},"MESA":{"qty":334.0,"cost":8733.44,"sale":17042.0}};
 const CAT_SUMMARY=[{"cat":"CAMA","skus":330,"gl":408,"al":344,"pl":84,"sl":"ok","gs":816,"as_":129,"ps":16,"ss":"lo","gu":1250,"au":2404,"pu":192},{"cat":"FRAGR\u00c2NCIA","skus":77,"gl":342,"al":312,"pl":91,"sl":"ok","gs":348,"as_":48,"ps":14,"ss":"lo","gu":690,"au":885,"pu":128},{"cat":"BANHO","skus":98,"gl":134,"al":144,"pl":107,"sl":"ok","gs":282,"as_":170,"ps":60,"ss":"lo","gu":416,"au":5023,"pu":1207},{"cat":"HOMEWEAR MASCULINO","skus":127,"gl":127,"al":95,"pl":75,"sl":"lo","gs":127,"as_":37,"ps":29,"ss":"lo","gu":254,"au":766,"pu":302},{"cat":"HOMEWEAR","skus":72,"gl":72,"al":40,"pl":56,"sl":"lo","gs":72,"as_":33,"ps":46,"ss":"lo","gu":144,"au":323,"pu":224},{"cat":"HOMEWEAR FEMININO","skus":52,"gl":52,"al":10,"pl":19,"sl":"lo","gs":52,"as_":1,"ps":2,"ss":"lo","gu":104,"au":267,"pu":257},{"cat":"MESA","skus":49,"gl":49,"al":106,"pl":216,"sl":"ex","gs":98,"as_":105,"ps":107,"ss":"ok","gu":147,"au":334,"pu":227},{"cat":"COBERTOR / MANTA","skus":40,"gl":40,"al":27,"pl":68,"sl":"lo","gs":80,"as_":10,"ps":12,"ss":"lo","gu":120,"au":101,"pu":84},{"cat":"RECHEIOS","skus":18,"gl":24,"al":35,"pl":146,"sl":"ex","gs":36,"as_":38,"ps":106,"ss":"ok","gu":60,"au":296,"pu":493},{"cat":"CAL\u00c7ADOS","skus":12,"gl":12,"al":18,"pl":150,"sl":"ex","gs":12,"as_":7,"ps":58,"ss":"lo","gu":24,"au":84,"pu":350},{"cat":"GIFT","skus":7,"gl":7,"al":0,"pl":0,"sl":"lo","gs":14,"as_":0,"ps":0,"ss":"lo","gu":21,"au":59,"pu":281},{"cat":"LIFESTYLE","skus":1,"gl":1,"al":1,"pl":100,"sl":"ok","gs":2,"as_":0,"ps":0,"ss":"lo","gu":3,"au":1,"pu":33}];
 </script>
 <script>
@@ -395,6 +442,24 @@ function computeAll() {
   setText('k-us-pecas', Math.round(pecasUS));
 
   buildDashboard(loja, storage, us);
+  var _DRL=['DOWN ALTERNATIVE','PIUMA','PIUMA USA','ALL YEAR','ALL YEAR USA','HIMALAYA'];
+  var _HABL=['TWILL','MUST','MUST NEW'];
+  var _gvr=0,_hab=0,_dr=0;
+  for(var _i=0;_i<GRADE_MASTER.length;_i++){
+    if((GRADE_MASTER[_i].repor_us||0)<=0) continue;
+    var _l=(GRADE_MASTER[_i].Linha||'').toUpperCase().trim();
+    if(_HABL.some(function(x){return _l.indexOf(x)>=0;})) _hab++;
+    else if(!_DRL.some(function(x){return _l.indexOf(x)>=0;})) _gvr++;
+  }
+  setText('b-gvr',_gvr); setText('b-hab',_hab);
+  if(typeof DR_SPECS!=='undefined'){
+    for(var _s in DR_SPECS){
+      var _rm=null;
+      for(var _j=0;_j<GRADE_MASTER.length;_j++){if(GRADE_MASTER[_j].SKU===_s){_rm=GRADE_MASTER[_j];break;}}
+      if(_rm&&(_rm.total_us||0)<(_rm.Min_US||0)) _dr++;
+    }
+    setText('b-dr',_dr);
+  }
   renderView();
 }
 
@@ -409,38 +474,62 @@ function setHTML(id, val) {
 }
 
 // ── DASHBOARD ─────────────────────────────────────────────────────────────
-function buildDashboard(loja, storage_list, us_list) {
-  function li(nome, sub, val, cor) {
-    return '<li style="padding:6px 0;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:7px;font-size:11px">'
-      + '<span style="width:5px;height:5px;border-radius:50%;background:'+cor+';flex-shrink:0"></span>'
-      + '<span style="flex:1;line-height:1.3">' + esc(nome) + '<br>'
-      + '<span style="font-size:9px;color:var(--wg)">' + sub + '</span></span>'
-      + '<span style="font-family:monospace;font-size:11px;font-weight:600;color:'+cor+';flex-shrink:0">+' + val + '</span>'
-      + '</li>';
+function buildDashboard(loja, stor, us) {
+  function fmt$(n){ return '$'+Math.round(n).toLocaleString('en'); }
+  setText('k-loja',         (loja||[]).length);
+  setText('k-loja-pecas',   Math.round((loja||[]).reduce(function(a,r){return a+(r.repor_loja||0);},0)));
+  setText('k-storage',      (stor||[]).length);
+  setText('k-storage-pecas',Math.round((stor||[]).reduce(function(a,r){return a+(r.repor_storage||0);},0)));
+  setText('k-us',           (us||[]).length);
+  setText('k-us-pecas',     Math.round((us||[]).reduce(function(a,r){return a+(r.repor_us||0);},0)));
+  if (typeof GRADE_CANDIDATES!=='undefined')
+    setText('k-grade',(GRADE_CANDIDATES||[]).filter(function(r){return r.tag==='VENDAS';}).length);
+
+  if (typeof INV_VALUE!=='undefined') {
+    var iv=INV_VALUE;
+    function si(p,d){d=d||{};setText(p+'-qty',Math.round(d.qty||0).toLocaleString('en'));setText(p+'-cost',fmt$(d.cost||0));setText(p+'-sale',fmt$(d.sale||0));}
+    si('inv-dd',iv.loja); si('inv-st',iv.storage); si('inv-as',iv.ascensus);
+    si('inv-tot',{qty:((iv.loja||{}).qty||0)+((iv.storage||{}).qty||0)+((iv.ascensus||{}).qty||0),
+      cost:((iv.loja||{}).cost||0)+((iv.storage||{}).cost||0)+((iv.ascensus||{}).cost||0),
+      sale:((iv.loja||{}).sale||0)+((iv.storage||{}).sale||0)+((iv.ascensus||{}).sale||0)});
   }
 
-  var lojaTop = loja.slice().sort(function(a,b){
-    var az=(a.dd===0&&a.storage===0)?1:0, bz=(b.dd===0&&b.storage===0)?1:0;
-    if (bz!==az) return bz-az;
-    return b.repor_loja - a.repor_loja;
-  }).slice(0,15);
+  if (typeof CAT_VALUE!=='undefined') {
+    var cv=CAT_VALUE;
+    var cats=Object.keys(cv).filter(function(c){return c&&c!=='0'&&(cv[c].sale||0)>0;});
+    cats.sort(function(a,b){return (cv[b].sale||0)-(cv[a].sale||0);});
+    var maxS=cats.length?(cv[cats[0]].sale||1):1;
+    var COLS={'CAMA':'var(--ac)','BANHO':'var(--bl)','HOMEWEAR MASCULINO':'var(--gn)',
+      'HOMEWEAR FEMININO':'#C47B7B','RECHEIOS':'var(--am)','FRAGRÂNCIA':'#9B7EC8',
+      'COBERTOR / MANTA':'#6B9E8C','MESA':'#8C7B6B','HOMEWEAR':'#7B8C6B'};
+    setHTML('cat-bars',cats.slice(0,9).map(function(cat){
+      var v=cv[cat]||{},pct=Math.round((v.sale||0)/maxS*100),col=COLS[cat]||'var(--wg)';
+      var mg=v.sale>0?Math.round((v.sale-v.cost)/v.sale*100):0;
+      return '<div style="margin-bottom:9px">'
+        +'<div style="display:flex;justify-content:space-between;margin-bottom:3px">'
+        +'<span style="font-size:10px;color:var(--ch)">'+cat+'</span>'
+        +'<span style="font-size:10px;font-family:monospace;color:var(--wg)">'+fmt$(v.sale||0)
+        +' &nbsp;<span style="color:var(--gn)">'+mg+'%</span></span>'
+        +'</div>'
+        +'<div style="height:6px;background:var(--bd);border-radius:3px;overflow:hidden">'
+        +'<div style="height:100%;width:'+pct+'%;background:'+col+';border-radius:3px"></div>'
+        +'</div></div>';
+    }).join(''));
+  }
 
-  setHTML('i-loja-top', lojaTop.length ? lojaTop.map(function(r){
-    var isZero = r.dd===0&&r.storage===0;
-    var origem = r.origem==='STORAGE' ? 'Storage' : 'Ascensus';
-    var sub = (isZero?'Zero na loja · ':'')+origem+' > Loja · '+r.Categoria;
-    return li(r.Nome||r.SKU, sub, r.repor_loja, isZero?'var(--rd)':'var(--am)');
-  }).join('') : '<li style="color:var(--gn);font-size:11px;padding:8px 0">Tudo em dia</li>');
-
-  var storTop = (storage_list||[]).slice(0,15);
-  setHTML('i-storage-top', storTop.length ? storTop.map(function(r){
-    return li(r.Nome||r.SKU, 'Ascensus > Storage · '+r.Categoria, r.repor_storage, 'var(--am)');
-  }).join('') : '<li style="color:var(--gn);font-size:11px;padding:8px 0">Tudo em dia</li>');
-
-  var usTop = (us_list||[]).slice(0,15);
-  setHTML('i-us-top', usTop.length ? usTop.map(function(r){
-    return li(r.Nome||r.SKU, 'Brasil > Ascensus · '+r.Categoria, r.repor_us, 'var(--bl)');
-  }).join('') : '<li style="color:var(--gn);font-size:11px;padding:8px 0">Tudo em dia</li>');
+  var top=(loja||[]).slice().sort(function(a,b){
+    var az=((a.dd||0)===0&&(a.storage||0)===0)?1:0,bz=((b.dd||0)===0&&(b.storage||0)===0)?1:0;
+    return bz!==az?bz-az:(b.repor_loja||0)-(a.repor_loja||0);
+  }).slice(0,8);
+  setHTML('i-loja-top',top.length?top.map(function(r){
+    var iz=(r.dd||0)===0&&(r.storage||0)===0;
+    return '<li style="padding:6px 0;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:7px;font-size:11px">'
+      +'<span style="width:5px;height:5px;border-radius:50%;background:'+(iz?'var(--rd)':'var(--am)')+';flex-shrink:0"></span>'
+      +'<span style="flex:1;line-height:1.3">'+esc(r.Nome||r.SKU)
+      +'<br><span style="font-size:9px;color:var(--wg)">'+(iz?'Zero na loja &middot; ':'')+esc(r.Categoria||'')+'</span></span>'
+      +'<span style="font-family:monospace;font-size:11px;font-weight:600;color:'+(iz?'var(--rd)':'var(--am)')+'">+'+(r.repor_loja||0)+'</span>'
+      +'</li>';
+  }).join(''):'<li style="color:var(--gn);font-size:11px;padding:8px 0">Tudo em dia</li>');
 }
 
 function esc(s) {
@@ -669,6 +758,7 @@ function restoreFocus() {
 }
 
 function renderView() {
+  if (S.view==='dashboard') buildDashboard(S.computed.loja||[],S.computed.storage||[],S.computed.us||[]);
   var v = S.view;
   if (v==='rep-loja')    buildTable('loja',    getTableData('loja'),    ['SKU','Produto','Categoria','Loja','Storage','Ascensus','Grade','A Repor','Origem','Vel.'], rowLoja);
   if (v==='rep-storage') buildTable('storage', getTableData('storage'), ['SKU','Produto','Categoria','Storage','Ascensus','Grade Stor.','Enviar'], rowStorage);
